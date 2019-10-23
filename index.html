@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather Forecast</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Libre+Baskerville&display=swap" rel="stylesheet">
+		<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+	</head>
+	<body>
+		<!-- Text input and search button -->
+		<div id="searchContainer">
+			<input class="searchControl" id="searchInput" type="text" placeholder="City Name">
+			<button class="searchControl" id="searchBtn">Search</button>
+		</div>
+
+		<!-- Map -->
+		<div id="mapElement"></div>
+
+		<!-- Weather information -->
+		<div id="weatherContainerDefault" class="weatherContainer">
+			<!-- Basic weather information -->
+			<div id="weatherDescription">
+				<h1 id="cityHeader"></h1>
+				<div id="weatherMain">
+					<div id="temperature"></div>
+					<div id="weatherDescriptionHeader"></div>
+					<!-- Skycons -->
+					<canvas id="icon" width="64" height="64"></canvas>
+				</div>
+			</div>
+
+			<hr>
+			<!-- Weather forecast for the upcoming hours -->
+			<div class="hourlyWeather">
+				<div class="row">
+					<div class="column">
+						<div id="timeInHour1"></div>
+						<div class="iconsContainer"><canvas class="icons" id=icon01 width="27" height="27"></canvas></div>
+						<div id="hourlyTemp1"></div>
+					</div>
+
+					<div class="column">
+						<div id="timeInHour2"></div>
+						<div class="iconsContainer"><canvas class="icons" id=icon02 width="27" height="27"></canvas></div>
+						<div id="hourlyTemp2"></div>
+					</div>
+
+					<div class="column">
+						<div id="timeInHour3"></div>
+						<div class="iconsContainer"><canvas class="icons" id=icon03 width="27" height="27"></canvas></div>
+						<div id="hourlyTemp3"></div>
+					</div>
+
+					<div class="column">
+						<div id="timeInHour4"></div>
+						<div class="iconsContainer"><canvas class="icons" id=icon04 width="27" height="27"></canvas></div>
+						<div id="hourlyTemp4"></div>
+					</div>
+
+					<div class="column">
+						<div id="timeInHour5"></div>
+						<div class="iconsContainer"><canvas class="icons" id=icon05 width="27" height="27"></canvas></div>
+						<div id="hourlyTemp5"></div>
+					</div>
+					
+					<div class="column">
+						<div id="timeInHour6"></div>
+						<div class="iconsContainer"><canvas class="icons" id=icon06 width="27" height="27"></canvas></div>
+						<div id="hourlyTemp6"></div>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<!-- Weather forecast for the following week -->
+			<div class='weatherForcast'>
+			  <div class='row'>
+			  	<!-- Day of the week -->
+			    <div class='column column1'>
+			        <p id="day1"></p>
+			        <p id="day2"></p>
+			        <p id="day3"></p>
+			        <p id="day4"></p>
+			        <p id="day5"></p>
+			        <p id="day6"></p>
+			        <p id="day7"></p>
+			    </div>
+			    <!-- Skycons for each day -->
+			    <div class='column'>
+			    	<div class="iconsContainer"><canvas class="icons" id=icon1 width="27" height="27"></canvas></div>
+			    	<div class="iconsContainer"><canvas class="icons" id=icon2 width="27" height="27"></canvas></div>
+			    	<div class="iconsContainer"><canvas class="icons" id=icon3 width="27" height="27"></canvas></div>
+			    	<div class="iconsContainer"><canvas class="icons" id=icon4 width="27" height="27"></canvas></div>
+			    	<div class="iconsContainer"><canvas class="icons" id=icon5 width="27" height="27"></canvas></div>
+			    	<div class="iconsContainer"><canvas class="icons" id=icon6 width="27" height="27"></canvas></div>
+			    	<div class="iconsContainer"><canvas class="icons" id=icon7 width="27" height="27"></canvas></div>
+			    </div>
+			    <!-- Max and min temperature for each day -->
+			    <div class='column column3'>
+			        <p id="temp1"></p>
+			        <p id="temp2"></p>
+			        <p id="temp3"></p>
+			        <p id="temp4"></p>
+			        <p id="temp5"></p>
+			        <p id="temp6"></p>
+			        <p id="temp7"></p>
+			    </div>
+			  </div>
+			</div>
+
+			<hr>
+
+			<!-- Other weather information -->
+			<div class="weatherProperties">
+				<div class="row">
+					<div class="column">
+						<div id="windSpeed" class="bottomDetails"></div>
+						<div id="humidity" class="bottomDetails"></div>
+					</div>
+					<div class="column">
+						<div id="pressure" class="bottomDetails"></div>
+						<div id="visibility" class="bottomDetails"></div>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+			<!-- Time zone and current location info -->
+			<div id="TimeZoneInfo" class="containerBottom"></div>
+			<div id="currentLocation" class="containerBottom"></div>
+		</div>
+
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.min.js"
+		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

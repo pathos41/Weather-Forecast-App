@@ -1,0 +1,167 @@
+/*Set the default background image*/
+html{
+	background-image: url("default.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100%;
+	font-family: 'Libre Baskerville', serif;
+	text-shadow: 1.5px 1.5px 2px black;
+	color: white;
+}
+
+body{
+	margin: 0;
+}
+
+/*Set the position of the search container*/
+#searchContainer{
+	padding: 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#searchContainer input{
+	width: 200px;
+}
+
+#searchContainer button{
+	background-color: rgb(1, 159, 198);
+	width: 75px;
+}
+
+.searchControl{
+	box-shadow: 2px 2px 5px black;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#mapElement{
+	display: inline-block;
+}
+
+/*The weather container is invisible by default*/
+#weatherContainerDefault{
+	visibility: hidden;
+	width: 28%;
+	margin-right: 50px;
+	margin-top: 110px;
+	display: inline-block;
+	float: right;
+}
+
+.weatherContainer{
+	background-color: rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 1px 5px black;
+	padding: 30px 50px;
+	border-radius: 10px;
+}
+
+#cityHeader{
+	margin: 5px;
+	margin-bottom: 20px;
+	font-size: 60px;
+	font-family: 'Fira Sans', sans-serif;
+	letter-spacing: 3px;
+}
+
+#weatherMain{
+	text-align: center;
+}
+
+#weatherMain{
+	display: block;
+	margin-bottom: 20px;
+}
+
+#weatherMain div{
+	display: inline-block;
+}
+
+/*Align with the skycon*/
+#temperature{
+	font-size: 38px;
+	vertical-align: 35%;
+}
+
+/*Align with the skycon*/
+#weatherDescriptionHeader{
+	font-size: 28px;
+	vertical-align: 60%;
+}
+
+#icon{
+	margin-left: 50px;
+}
+
+hr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+}
+
+.hourlyWeather{
+	margin-top: 5px;
+}
+
+.weatherForcast{
+	margin: 15px;
+	padding: 0 50px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+}
+
+.column1{
+	text-align: left;
+}
+
+.column3{
+	text-align: right;
+}
+
+p{
+	margin: 6px 0;
+}
+
+.iconsContainer{
+	text-align: center;
+}
+
+.icons{
+	margin-top: 1px;
+}
+
+.bottomDetails{
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.containerBottom{
+	text-align: center;
+	font-size: 17px;
+}
+
+#TimeZoneInfo{
+	margin-top: 25px;
+}
+
+#currentLocation{
+	margin-top: 5px;
+}
